@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <label>Coupon Form</label>
+    <%= form_tag coupons_path %>
+    Coupon Code:<%= text_field_tag :'coupon[coupon_code]' %>
+    Store:<%= text_field_tag :'coupon[store]' %>
+    <%= submit_tag "Submit Coupon" %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  </body>
+</html>
