@@ -1,0 +1,15 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <h3>Coupon Form</h3>
+  </head>
+  <body>
+    <%= form_tag coupons_path do %>
+  <label>Coupon Code:</label><br>
+  <%= text_field_tag :'coupon[coupon_code]' %><br>
+  <label>Store:</label><br>
+  <%= text_area_tag :'coupon[store]'%><br>
+  <%= submit_tag "Submit Coupon" %>
+<% end %>
+  </body>
+</html>
