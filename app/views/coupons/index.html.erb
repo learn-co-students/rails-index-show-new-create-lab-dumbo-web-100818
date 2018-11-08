@@ -2,8 +2,8 @@ index page<br>
 
 <ol>
  <% @coupons.each do |coupon| %>
-  <li><%= link_to coupon.coupon_code, coupon_path(coupon) %>
-    <%= coupon.store %>
+ <li><%= link_to coupon.coupon_code, coupon_path(coupon) %>
+ <%= link_to coupon.store, coupon_path(coupon) %></li>
   </li>
  <% end %>
 </ol>

@@ -9,11 +9,18 @@ class CouponsController < ApplicationController
   end
 
   def new
+    @coupon = Coupon.new
   end
 
   def create
     @coupon = Coupon.create(coupon_params)
     redirect_to @coupon
+  end
+
+  def destroy
+    @coupon = Coupon.find(params[:id])
+    @coupon.destroy
+    redirect_to coupons_path
   end
 
   private
